@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="@dimen/standard_space"
+    app:cardElevation="@dimen/standard_space"
+    android:layout_gravity="center"
+    android:id="@+id/parent_cv"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:elevation="@dimen/standard_space"
+                android:layout_marginTop="@dimen/standard_space"
+                android:layout_marginHorizontal="@dimen/standard_space"
+                app:singleSelection="true"
+                android:id="@+id/material_toggle_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    android:theme="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:id="@+id/day_mb"
+                    app:elevation="@dimen/standard_space"
+                    app:cornerRadius="@dimen/standard_space"
+                    app:icon="@drawable/ic_sun"
+                    app:iconPadding="@dimen/standard_space"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    android:textAllCaps="true"
+                    android:text="@string/day"
+                    android:paddingVertical="@dimen/standard_half_space"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:theme="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:id="@+id/night_mb"
+                    app:cornerRadius="@dimen/standard_space"
+                    app:icon="@drawable/ic_moon"
+                    app:iconPadding="@dimen/standard_space"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    android:textAllCaps="true"
+                    android:text="@string/night"
+                    android:paddingVertical="@dimen/standard_half_space"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/extra_ll"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/standard_half_space"/>
+
+                <TextView
+                    android:layout_marginHorizontal="@dimen/standard_space"
+                    android:textSize="16sp"
+                    android:id="@+id/board_text_size_tv"
+                    android:textColor="@color/default_popup_body_text"
+                    android:text="Board text size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:layout_marginHorizontal="@dimen/standard_space"
+                    app:singleSelection="true"
+                    android:id="@+id/material_text_size_toggle_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:theme="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:id="@+id/small_font_mb"
+                        app:cornerRadius="@dimen/standard_space"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/standard_space"
+                        android:text="Aa"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:theme="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:id="@+id/medium_font_mb"
+                        app:cornerRadius="@dimen/standard_space"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                        android:textAllCaps="false"
+                        android:textSize="20sp"
+                        android:text="Aa"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:theme="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:id="@+id/large_font_mb"
+                        app:cornerRadius="@dimen/standard_space"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                        android:textAllCaps="false"
+                        android:text="Aa"
+                        android:textSize="24sp"
+                        android:paddingVertical="@dimen/standard_half_space"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/standard_half_space"/>
+
+                <View
+                    android:id="@+id/divider_view_1"
+                    android:background="@color/default_content_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/standard_half_space"/>
+
+                <TextView
+                    android:layout_marginHorizontal="@dimen/standard_space"
+                    android:textSize="16sp"
+                    android:id="@+id/score_tv"
+                    android:textColor="@color/default_popup_body_text"
+                    android:text="Game Score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:elevation="@dimen/standard_space"
+                    android:layout_marginHorizontal="@dimen/standard_space"
+                    app:singleSelection="true"
+                    android:id="@+id/material_toggle_group_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:theme="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:id="@+id/score_show_mb"
+                        app:elevation="@dimen/standard_space"
+                        app:cornerRadius="@dimen/standard_space"
+                        app:icon="@drawable/ic_visibility_on"
+                        app:iconPadding="@dimen/standard_space"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                        android:textAllCaps="true"
+                        android:text="@string/show"
+                        android:paddingVertical="@dimen/standard_half_space"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:theme="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:id="@+id/score_hide_mb"
+                        app:cornerRadius="@dimen/standard_space"
+                        app:icon="@drawable/ic_visibility_off"
+                        app:iconPadding="@dimen/standard_space"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                        android:textAllCaps="true"
+                        android:text="@string/hide"
+                        android:paddingVertical="@dimen/standard_half_space"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/standard_half_space"/>
+
+                <TextView
+                    android:layout_marginHorizontal="@dimen/standard_space"
+                    android:textSize="16sp"
+                    android:id="@+id/time_tv"
+                    android:textColor="@color/default_popup_body_text"
+                    android:text="Game Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:elevation="@dimen/standard_space"
+                    android:layout_marginHorizontal="@dimen/standard_space"
+                    app:singleSelection="true"
+                    android:id="@+id/material_toggle_group_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:theme="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:id="@+id/time_show_mb"
+                        app:elevation="@dimen/standard_space"
+                        app:cornerRadius="@dimen/standard_space"
+                        app:icon="@drawable/ic_visibility_on"
+                        app:iconPadding="@dimen/standard_space"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                        android:textAllCaps="true"
+                        android:text="@string/show"
+                        android:paddingVertical="@dimen/standard_half_space"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:theme="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:id="@+id/time_hide_mb"
+                        app:cornerRadius="@dimen/standard_space"
+                        app:icon="@drawable/ic_visibility_off"
+                        app:iconPadding="@dimen/standard_space"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                        android:textAllCaps="true"
+                        android:text="@string/hide"
+                        android:paddingVertical="@dimen/standard_half_space"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/standard_half_space"/>
+
+                <TextView
+                    android:layout_marginHorizontal="@dimen/standard_space"
+                    android:textSize="16sp"
+                    android:id="@+id/sound_tv"
+                    android:textColor="@color/default_popup_body_text"
+                    android:text="Game Sounds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:elevation="@dimen/standard_space"
+                    android:layout_marginHorizontal="@dimen/standard_space"
+                    app:singleSelection="true"
+                    android:id="@+id/material_toggle_group_sound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:theme="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:id="@+id/sound_show_mb"
+                        app:elevation="@dimen/standard_space"
+                        app:cornerRadius="@dimen/standard_space"
+                        app:icon="@drawable/ic_sound_on"
+                        app:iconPadding="@dimen/standard_space"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                        android:textAllCaps="true"
+                        android:text="@string/sound_on"
+                        android:paddingVertical="@dimen/standard_half_space"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:theme="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:id="@+id/sound_hide_mb"
+                        app:cornerRadius="@dimen/standard_space"
+                        app:icon="@drawable/ic_sound_off"
+                        app:iconPadding="@dimen/standard_space"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                        android:textAllCaps="true"
+                        android:text="@string/sound_off"
+                        android:paddingVertical="@dimen/standard_half_space"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/standard_half_space"/>
+
+                <TextView
+                    android:layout_marginHorizontal="@dimen/standard_space"
+                    android:textSize="16sp"
+                    android:id="@+id/vibration_tv"
+                    android:textColor="@color/default_popup_body_text"
+                    android:text="Game Vibration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:elevation="@dimen/standard_space"
+                    android:layout_marginHorizontal="@dimen/standard_space"
+                    app:singleSelection="true"
+                    android:id="@+id/material_toggle_group_vibration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:theme="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:id="@+id/vibration_show_mb"
+                        app:elevation="@dimen/standard_space"
+                        app:cornerRadius="@dimen/standard_space"
+                        app:iconPadding="@dimen/standard_space"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                        android:textAllCaps="true"
+                        android:text="@string/sound_on"
+                        android:paddingVertical="@dimen/standard_half_space"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:theme="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:id="@+id/vibration_hide_mb"
+                        app:cornerRadius="@dimen/standard_space"
+                        app:iconPadding="@dimen/standard_space"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                        android:textAllCaps="true"
+                        android:text="@string/sound_off"
+                        android:paddingVertical="@dimen/standard_half_space"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/standard_space"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+</com.google.android.material.card.MaterialCardView>

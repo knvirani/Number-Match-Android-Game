@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_cv"
+    android:layout_gravity="center"
+    app:cardElevation="@dimen/standard_space"
+    app:cardCornerRadius="@dimen/standard_space"
+    app:cardBackgroundColor="@color/default_popup_card_bg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="320dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/popup_header"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/default_popup_title"
+            android:padding="@dimen/standard_space"
+            android:text="Want to exit ?"
+            android:textSize="@dimen/popup_title_text_size"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textSize="@dimen/popup_body_text_size"
+            android:paddingHorizontal="@dimen/standard_space"
+            android:layout_marginBottom="32dp"
+            android:text="The current session of this game will be saved upon exit. You can resume it anytime."
+            android:textColor="@color/default_popup_body_text"
+            android:gravity="start"
+            android:id="@+id/popup_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:id="@+id/divider_view_1"
+            android:background="@color/default_normal_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/yes_cv"
+                app:cardBackgroundColor="@color/default_popup_secondary_btn_bg"
+                android:layout_weight="1"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="0dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/yes_tv"
+                    android:textSize="@dimen/popup_btn_text_size"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:padding="@dimen/standard_space"
+                    android:textColor="@color/default_popup_secondary_btn_text"
+                    android:text="Yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/no_cv"
+                app:cardBackgroundColor="@color/default_popup_primary_btn_bg"
+                android:layout_weight="1"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="0dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/no_tv"
+                    android:textSize="@dimen/popup_btn_text_size"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:padding="@dimen/standard_space"
+                    android:textColor="@color/default_popup_primary_btn_text"
+                    android:text="No"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/close_cv"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        android:layout_margin="@dimen/standard_space"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/parent_cv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:tint="@color/white"
+            android:layout_margin="@dimen/standard_space"
+            android:src="@drawable/ic_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/parent_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/content_layout"
+            android:visibility="visible"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/standard_half_space"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/standard_half_space" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    app:strokeColor="@color/default_easy_level_bg"
+                    app:strokeWidth="@dimen/diff_level_card_stroke_width"
+                    app:cardBackgroundColor="@color/default_easy_level_bg"
+                    android:id="@+id/easy_cv"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/level_box_size"
+                    android:layout_marginHorizontal="@dimen/standard_half_space"
+                    android:layout_marginVertical="@dimen/standard_half_space">
+
+                    <TextView
+                        android:id="@+id/easy_tv"
+                        android:text="@string/easy_level"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/default_difficulty_level_title"
+                        android:layout_margin="@dimen/standard_half_space"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    app:strokeColor="@color/default_medium_level_bg"
+                    app:strokeWidth="@dimen/diff_level_card_stroke_width"
+                    app:cardBackgroundColor="@color/default_medium_level_bg"
+                    android:id="@+id/medium_cv"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/level_box_size"
+                    android:layout_marginHorizontal="@dimen/standard_half_space"
+                    android:layout_marginVertical="@dimen/standard_half_space">
+
+                    <TextView
+                        android:id="@+id/medium_tv"
+                        android:text="@string/medium_level"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/default_difficulty_level_title"
+                        android:layout_margin="@dimen/standard_half_space"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    app:strokeColor="@color/default_hard_level_bg"
+                    app:strokeWidth="@dimen/diff_level_card_stroke_width"
+                    app:cardBackgroundColor="@color/default_hard_level_bg"
+                    android:id="@+id/hard_cv"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/level_box_size"
+                    android:layout_marginHorizontal="@dimen/standard_half_space"
+                    android:layout_marginVertical="@dimen/standard_half_space">
+
+                    <TextView
+                        android:id="@+id/hard_tv"
+                        android:text="@string/hard_level"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/default_difficulty_level_title"
+                        android:layout_margin="@dimen/standard_half_space"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/standard_half_space" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            app:trackColor="@color/default_game_session_linear_progress_track"
+            app:indicatorColor="@color/default_primary_btn_bg"
+            android:indeterminateBehavior="repeat"
+            android:indeterminate="true"
+            android:id="@+id/progress_circular"
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            app:trackThickness="@dimen/standard_half_space"
+            app:indicatorSize="75dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

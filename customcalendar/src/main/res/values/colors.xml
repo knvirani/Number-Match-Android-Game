@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="appLightBlue">#34B7F1</color>
+    <color name="appBlue">#006AFF</color>
+    <color name="appLightGreen">#25D366</color>
+    <color name="appTealGreen">#128C7E</color>
+    <color name="appTealDarkGreen">#075E54</color>
+    <color name="darkThemeAppBlue">#0F60AF</color>
+    <color name="sessionSuccess">#21C328</color>
+
+    <color name="default_calendar_week_day_row_bg">#C9D0DD</color>
+    <color name="default_calendar_week_day_title">#5F6D87</color>
+    <color name="default_calendar_day">#5F6D87</color>
+    <color name="default_today_in_calendar">@color/appBlue</color>
+    <color name="default_today_complete_text">@color/white</color>
+    <color name="default_today_complete_bg">@color/appBlue</color>
+    <color name="default_today_incomplete_text">#5F6D87</color>
+    <color name="default_today_incomplete_bg">@color/appBlue</color>
+    <color name="default_invalid_calendar_date">#A2AAB8</color>
+    <color name="default_selected_date_bg">@color/appBlue</color>
+    <color name="default_selected_date_text">@color/white</color>
+    <color name="default_session_complete_date_bg">@color/sessionSuccess</color>
+    <color name="default_session_complete_date_text">@color/white</color>
+    <color name="default_session_incomplete_date_bg">#E6D327</color>
+    <color name="default_session_incomplete_date_text">#5F6D87</color>
+
+    <color name="theme_1_calendar_week_day_row_bg">#C9D0DD</color>
+    <color name="theme_1_calendar_week_day_title">#5F6D87</color>
+    <color name="theme_1_calendar_day">#5F6D87</color>
+    <color name="theme_1_today_complete_text">@color/white</color>
+    <color name="theme_1_today_complete_bg">@color/appBlue</color>
+    <color name="theme_1_today_incomplete_text">#5F6D87</color>
+    <color name="theme_1_today_in_calendar">@color/appBlue</color>
+    <color name="theme_1_invalid_calendar_date">#A2AAB8</color>
+    <color name="theme_1_selected_date_bg">@color/appBlue</color>
+    <color name="theme_1_selected_date_text">@color/white</color>
+    <color name="theme_1_session_complete_date_bg">@color/sessionSuccess</color>
+    <color name="theme_1_session_complete_date_text">@color/white</color>
+    <color name="theme_1_session_incomplete_date_bg">#E6D327</color>
+    <color name="theme_1_session_incomplete_date_text">@color/white</color>
+
+</resources>

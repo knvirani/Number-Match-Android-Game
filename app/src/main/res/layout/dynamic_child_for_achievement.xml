@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/parent_cv"
+        app:cardBackgroundColor="@color/default_stats_cv_bg"
+        app:cardElevation="@dimen/standard_half_space"
+        app:cardCornerRadius="@dimen/standard_space"
+        android:layout_margin="@dimen/standard_space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:tint="@color/appBlue"
+                android:id="@+id/achievement_status_iv"
+                android:src="@drawable/ic_filled_check"
+                android:layout_margin="@dimen/standard_space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/achievement_title"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="FIRST NUMBER"
+                android:paddingHorizontal="@dimen/standard_space"
+                android:textSize="@dimen/dynamic_stats_type_label_size"
+                android:textColor="@color/default_app_bar_text"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

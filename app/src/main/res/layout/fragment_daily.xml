@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.DailyFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content_container"
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/date_info_cv"
+                app:cardElevation="4dp"
+                android:layout_margin="@dimen/standard_space"
+                app:cardCornerRadius="@dimen/standard_space"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:padding="@dimen/standard_half_space"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:id="@+id/calender_iv"
+                        android:src="@drawable/ic_daily_calendar"
+                        android:layout_width="@dimen/daily_page_trophy_width"
+                        android:layout_height="@dimen/daily_page_trophy_width"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:orientation="vertical"
+                        android:gravity="center_vertical|start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/daily_challenge_title_tv"
+                            android:textColor="@color/default_daily_challenge_title_text"
+                            android:textSize="@dimen/daily_challenge_title"
+                            android:text="Daily Challenges For"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/daily_challenge_date_tv"
+                            android:textColor="@color/default_daily_challenge_date_text"
+                            android:textSize="@dimen/daily_challenge_date"
+                            android:text="16 Aug, 2012"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/roboto_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginTop="@dimen/standard_half_space"
+                            android:background="@color/default_primary_btn_bg"
+                            android:paddingHorizontal="@dimen/standard_half_space"
+                            android:paddingVertical="4dp"
+                            android:id="@+id/daily_challenge_duration_tv"
+                            android:textColor="@color/default_primary_btn_text"
+                            android:textSize="14sp"
+                            android:text="Ends in 00:00:00"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/calendar_container"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardElevation="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.fourshape.numbermatch.daily_game_view.SessionPathView
+                android:id="@+id/session_path_view"
+                android:layout_width="@dimen/session_path_view_height"
+                android:layout_height="@dimen/session_path_view_height"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress_circular"
+        app:indicatorSize="75dp"
+        app:trackThickness="@dimen/standard_half_space"
+        android:layout_gravity="center"
+        android:indeterminateBehavior="cycle"
+        android:indeterminate="true"
+        app:trackColor="@color/default_game_session_linear_progress_track"
+        app:indicatorColor="@color/default_circular_progress_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</FrameLayout>

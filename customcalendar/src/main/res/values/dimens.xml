@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="calendar_mark_circle_size">16dp</dimen>
+    <dimen name="calendar_mark_stroke_width">2dp</dimen>
+</resources>

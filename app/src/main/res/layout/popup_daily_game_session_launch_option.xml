@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/default_popup_card_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/content_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/resume_mb"
+            app:icon="@drawable/ic_timelapse"
+            android:layout_marginTop="@dimen/standard_space"
+            android:layout_marginHorizontal="@dimen/standard_space"
+            android:textSize="@dimen/home_page_game_start_btn_text_size"
+            app:backgroundTint="@color/default_primary_btn_bg"
+            android:textColor="@color/default_primary_btn_text"
+            android:text="@string/resume_game"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:fontFamily="@font/roboto_medium"
+            app:cornerRadius="@dimen/big_corner_radius"
+            android:paddingVertical="@dimen/standard_half_space"
+            app:elevation="@dimen/standard_space"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/restart_mb"
+            app:icon="@drawable/ic_restart"
+            android:layout_margin="@dimen/standard_space"
+            android:textSize="@dimen/home_page_game_start_btn_text_size"
+            app:backgroundTint="@color/default_primary_btn_bg"
+            android:textColor="@color/default_primary_btn_text"
+            android:text="@string/restart_game"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:fontFamily="@font/roboto_medium"
+            app:cornerRadius="@dimen/big_corner_radius"
+            android:paddingVertical="@dimen/standard_half_space"
+            app:elevation="@dimen/standard_space"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        app:trackColor="@color/default_game_session_linear_progress_track"
+        app:indicatorColor="@color/default_primary_btn_bg"
+        android:indeterminateBehavior="repeat"
+        android:indeterminate="true"
+        android:id="@+id/progress_circular"
+        android:visibility="invisible"
+        android:layout_gravity="center"
+        app:trackThickness="@dimen/standard_half_space"
+        app:indicatorSize="75dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</FrameLayout>

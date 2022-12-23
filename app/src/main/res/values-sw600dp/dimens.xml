@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="standard_space">16dp</dimen>
+    <dimen name="standard_half_space">8dp</dimen>
+    <dimen name="big_corner_radius">36dp</dimen>
+
+    <!-- Home Fragment -->
+    <dimen name="home_page_logo_title_vertical_padding">32dp</dimen>
+    <dimen name="home_page_daily_image_top_padding">50dp</dimen>
+    <dimen name="home_page_daily_image_height">170dp</dimen>
+    <dimen name="home_page_daily_cv_width">280dp</dimen>
+    <dimen name="home_page_daily_day_text_padding_horizontal">20dp</dimen>
+    <dimen name="home_page_daily_month_text_margin_end">20dp</dimen>
+    <dimen name="home_page_daily_day_text_size">36sp</dimen>
+    <dimen name="home_page_stats_icon_size">50dp</dimen>
+    <dimen name="home_page_stats_text_size">16sp</dimen>
+    <dimen name="home_page_my_stats_btn_text_size">16sp</dimen>
+    <dimen name="home_page_game_start_btn_text_size">24sp</dimen>
+    <dimen name="home_page_btn_container_layout_width">360dp</dimen>
+
+    <!-- Daily Fragment -->
+    <dimen name="daily_page_trophy_width">130dp</dimen>
+    <dimen name="daily_page_trophy_height">170dp</dimen>
+    <dimen name="month_title_size">28sp</dimen>
+    <dimen name="year_title_size">24sp</dimen>
+    <dimen name="calendar_width">275dp</dimen>
+    <dimen name="calendar_height">350dp</dimen>
+    <dimen name="daily_page_play_btn">65dp</dimen>
+    <dimen name="daily_play_mtrl_cv_stroke_width">3dp</dimen>
+    <dimen name="daily_play_btn_cv_min_width">280dp</dimen>
+
+    <dimen name="daily_challenge_bottom_popup_body_text">18sp</dimen>
+    <dimen name="daily_challenge_title">18sp</dimen>
+    <dimen name="daily_challenge_date">28sp</dimen>
+    <dimen name="session_path_view_height">400dp</dimen>
+
+    <!-- Howtoplay Activity -->
+    <dimen name="howtoplay_container_width">400dp</dimen>
+
+    <!-- GameSession Activity -->
+    <dimen name="game_start_progress_corner_radius">16dp</dimen>
+    <dimen name="game_start_progress_track_thickness">50dp</dimen>
+    <dimen name="board_control_limit_text_view_size">25dp</dimen>
+    <dimen name="board_control_limit_bg_shape_size">16dp</dimen>
+    <dimen name="board_control_limit_text_size">16sp</dimen>
+    <dimen name="board_control_img_size">45dp</dimen>
+    <dimen name="add_row_cv_corner_size">16dp</dimen>
+    <dimen name="hint_cv_corner_size">32dp</dimen>
+    <dimen name="linear_progress_indicator_width">320dp</dimen>
+    <dimen name="levelr_2_top_status_bar_width">360dp</dimen>
+
+</resources>

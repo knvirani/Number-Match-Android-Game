@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="@dimen/standard_space"
+    app:cardCornerRadius="@dimen/standard_space"
+    android:layout_gravity="center"
+    android:id="@+id/parent_cv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:layout_margin="@dimen/standard_space"
+        app:singleSelection="true"
+        android:id="@+id/material_toggle_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:theme="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:id="@+id/sound_on_mb"
+            app:cornerRadius="@dimen/standard_space"
+            app:icon="@drawable/ic_sound_on"
+            app:iconPadding="@dimen/standard_space"
+            android:fontFamily="@font/roboto_medium"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textAllCaps="true"
+            android:text="@string/sound_on"
+            android:paddingVertical="@dimen/standard_half_space"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:theme="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:id="@+id/sound_off_mb"
+            app:cornerRadius="@dimen/standard_space"
+            app:icon="@drawable/ic_sound_off"
+            app:iconPadding="@dimen/standard_space"
+            android:fontFamily="@font/roboto_medium"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textAllCaps="true"
+            android:text="@string/sound_off"
+            android:paddingVertical="@dimen/standard_half_space"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+</com.google.android.material.card.MaterialCardView>

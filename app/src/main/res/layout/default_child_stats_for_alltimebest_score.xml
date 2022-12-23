@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/parent_cv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardBackgroundColor="@color/default_stats_cv_bg"
+        app:cardElevation="@dimen/standard_half_space"
+        app:cardCornerRadius="@dimen/standard_space"
+        android:layout_margin="@dimen/standard_space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/stats_value"
+                android:text="252"
+                android:paddingHorizontal="@dimen/standard_space"
+                android:paddingVertical="@dimen/standard_half_space"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline2"
+                android:textColor="@color/default_stats_value_text"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/stats_title"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="ALL TIME BEST SCORE"
+                android:paddingHorizontal="@dimen/standard_space"
+                android:paddingVertical="@dimen/standard_half_space"
+                android:layout_marginBottom="@dimen/standard_space"
+                android:textSize="@dimen/dynamic_stats_type_label_size"
+                android:textColor="@color/default_app_bar_text"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/standard_space"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

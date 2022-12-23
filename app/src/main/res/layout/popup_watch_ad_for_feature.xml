@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/parent_cv"
+        android:layout_gravity="center"
+        app:cardElevation="@dimen/standard_space"
+        app:cardCornerRadius="@dimen/standard_space"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/popup_header"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/default_popup_title"
+                android:padding="@dimen/standard_space"
+                android:text="Watch Ad"
+                android:textSize="@dimen/popup_title_text_size"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textSize="@dimen/popup_body_text_size"
+                android:paddingHorizontal="@dimen/standard_space"
+                android:layout_marginBottom="@dimen/standard_space"
+                android:text="You have reached to limit for this feature to access. Watch the complete Advertise to restore the access."
+                android:textColor="@color/default_popup_body_text"
+                android:gravity="center"
+                android:id="@+id/popup_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:visibility="invisible"
+                    android:id="@+id/status_container"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/status_mb"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                        android:fontFamily="@font/roboto_medium"
+                        app:iconGravity="textStart"
+                        app:icon="@drawable/ic_close"
+                        android:text="Unable to reward you."
+                        app:cornerRadius="@dimen/standard_space"
+                        app:elevation="0dp"
+                        app:backgroundTint="@color/default_error_item_bg"
+                        android:textColor="@color/default_error_item_text"
+                        android:layout_marginHorizontal="@dimen/standard_space"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/standard_half_space"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/close_mb"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="I'll Try after few minutes"
+                        app:cornerRadius="@dimen/standard_space"
+                        app:elevation="@dimen/standard_space"
+                        app:backgroundTint="@color/default_primary_btn_bg"
+                        android:textColor="@color/default_primary_btn_text"
+                        android:layout_marginHorizontal="@dimen/standard_space"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/standard_space"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    app:trackColor="@color/default_game_session_linear_progress_track"
+                    app:indicatorColor="@color/default_primary_btn_bg"
+                    android:indeterminateBehavior="repeat"
+                    android:indeterminate="true"
+                    android:id="@+id/progress_circular"
+                    android:visibility="invisible"
+                    android:layout_marginTop="@dimen/standard_half_space"
+                    android:layout_gravity="center_horizontal|top"
+                    app:trackThickness="@dimen/standard_half_space"
+                    app:indicatorSize="75dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:visibility="visible"
+                    android:id="@+id/btn_container"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/watch_ad_mb"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Watch Ad"
+                        app:cornerRadius="@dimen/standard_space"
+                        app:elevation="@dimen/standard_space"
+                        app:backgroundTint="@color/default_primary_btn_bg"
+                        android:textColor="@color/default_popup_primary_btn_text"
+                        android:layout_marginHorizontal="@dimen/standard_space"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/standard_half_space"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/cancel_watch_ad_mb"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Cancel"
+                        app:cornerRadius="@dimen/standard_space"
+                        app:elevation="@dimen/standard_space"
+                        app:backgroundTint="@color/default_secondary_btn_bg"
+                        android:textColor="@color/default_secondary_btn_text"
+                        android:layout_marginHorizontal="@dimen/standard_space"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/standard_space"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </FrameLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

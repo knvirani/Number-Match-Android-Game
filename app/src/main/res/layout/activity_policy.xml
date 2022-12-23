@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PolicyActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/default_app_bar_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/material_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@color/default_app_bar_text"
+            app:title="@string/privacy_policy"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/default_normal_divider" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <FrameLayout
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/content_container_ll"
+            android:layout_gravity="top|center_horizontal"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_margin="@dimen/standard_space"
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="By using this app, you're agree with our privacy policy and TnC."
+                android:id="@+id/policy_description_text"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/default_popup_body_text"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/popup_body_text_size"
+                android:padding="@dimen/standard_space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/view_policy_mb"
+                app:icon="@drawable/ic_external_open"
+                app:cornerRadius="@dimen/standard_space"
+                app:elevation="@dimen/standard_space"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="16sp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:text="Read Full Policy"
+                android:layout_marginHorizontal="@dimen/standard_space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress_circular"
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            app:trackColor="@color/default_game_session_linear_progress_track"
+            app:indicatorColor="@color/default_circular_progress_indicator"
+            android:indeterminateBehavior="repeat"
+            android:indeterminate="true"
+            app:indicatorSize="75dp"
+            app:trackThickness="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_margin="@dimen/standard_space"
+            android:padding="@dimen/standard_space"
+            android:layout_gravity="bottom|center_horizontal"
+            android:id="@+id/btn_container_ll"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/agree_mb"
+                app:cornerRadius="@dimen/standard_space"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:backgroundTint="@color/default_popup_primary_btn_bg"
+                android:textColor="@color/default_popup_primary_btn_text"
+                android:layout_marginHorizontal="@dimen/standard_space"
+                android:textSize="@dimen/popup_btn_text_size"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Accept &amp; Continue"
+                android:textAllCaps="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/decline_mb"
+                app:cornerRadius="@dimen/standard_space"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:backgroundTint="@color/default_popup_secondary_btn_bg"
+                android:textColor="@color/default_popup_secondary_btn_text"
+                android:layout_margin="@dimen/standard_space"
+                android:textSize="@dimen/popup_btn_text_size"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Decline"
+                android:textAllCaps="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/app_title_home"
+            android:paddingHorizontal="@dimen/standard_space"
+            android:paddingVertical="@dimen/home_page_logo_title_vertical_padding"
+            android:textColor="@color/default_app_home_title"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+            android:fontFamily="@font/roboto_black"
+            android:gravity="center"
+            android:text="@string/app_name"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/daily_cv"
+            app:cardElevation="@dimen/standard_half_space"
+            app:cardCornerRadius="@dimen/standard_space"
+            app:cardBackgroundColor="@color/default_daily_play_cv_bg"
+            app:layout_constraintTop_toBottomOf="@id/app_title_home"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="@dimen/home_page_daily_cv_width"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginTop="@dimen/home_page_daily_image_top_padding"
+                android:alpha="1"
+                android:src="@drawable/daily_card_picture_v2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/home_page_daily_image_height"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/day_ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textColor="@color/default_daily_day_text"
+                            android:id="@+id/daily_day_tv"
+                            android:fontFamily="@font/roboto_black"
+                            android:text="12"
+                            android:textSize="@dimen/home_page_daily_day_text_size"
+                            android:paddingVertical="@dimen/standard_half_space"
+                            android:paddingHorizontal="@dimen/home_page_daily_day_text_padding_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <TextView
+                        android:textColor="@color/default_daily_month_text"
+                        android:id="@+id/daily_month_tv"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="JUN"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/home_page_daily_day_text_size"
+                        android:paddingVertical="@dimen/standard_half_space"
+                        android:layout_marginEnd="@dimen/home_page_daily_month_text_margin_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:id="@+id/timelapse_iv"
+                        android:layout_marginEnd="@dimen/standard_space"
+                        android:tint="@color/default_home_page_right_arrow_tint"
+                        android:src="@drawable/ic_timelapse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+
+                    <ImageView
+                        android:id="@+id/right_arrow_iv"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/standard_space"
+                        android:tint="@color/default_home_page_right_arrow_tint"
+                        android:src="@drawable/ic_right_arrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="@dimen/standard_space"
+            android:orientation="vertical"
+            android:minWidth="@dimen/home_page_btn_container_layout_width"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/saved_game_mb"
+                app:backgroundTint="@color/default_primary_btn_bg"
+                android:textColor="@color/default_home_page_primary_btn_text"
+                android:textSize="@dimen/home_page_game_start_btn_text_size"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:fontFamily="@font/roboto_medium"
+                android:paddingVertical="@dimen/standard_half_space"
+                app:elevation="@dimen/standard_space"
+                app:cornerRadius="@dimen/big_corner_radius"
+                android:text="Continue\nEasy \u2022 05:45"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/new_game_mb"
+                app:backgroundTint="@color/sessionSuccess"
+                android:textColor="@color/default_home_page_primary_btn_text"
+                android:textSize="@dimen/home_page_game_start_btn_text_size"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:fontFamily="@font/roboto_medium"
+                android:paddingVertical="@dimen/standard_half_space"
+                app:elevation="@dimen/standard_space"
+                app:cornerRadius="@dimen/big_corner_radius"
+                android:text="@string/new_game"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_fl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="@dimen/howtoplay_container_width"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/board_view_container"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/board_cv"
+                    android:layout_marginVertical="@dimen/standard_space"
+                    app:cardElevation="@dimen/standard_half_space"
+                    app:cardCornerRadius="0dp"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content">
+
+                    <com.fourshape.numbermatch.puzzle_core.BoardView
+                        android:id="@+id/board_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/add_row_cv"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/standard_half_space"
+                app:cardBackgroundColor="@color/default_game_board_control_cv_bg"
+                app:cardCornerRadius="@dimen/add_row_cv_corner_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/add_row_iv"
+                    android:layout_margin="@dimen/standard_half_space"
+                    android:src="@drawable/ic_add"
+                    android:tint="@color/default_game_board_control_img_tint"
+                    android:layout_width="@dimen/board_control_img_size"
+                    android:layout_height="@dimen/board_control_img_size"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/content_cv"
+                app:cardCornerRadius="@dimen/standard_space"
+                app:cardElevation="@dimen/standard_half_space"
+                android:layout_margin="@dimen/standard_space"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:padding="@dimen/standard_space"
+                        android:text="Step 1/8: Horizontal match"
+                        android:gravity="center"
+                        android:textColor="@color/default_howtoplay_step_header_text"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/howtoplay_step_header_text_size"
+                        android:fontFamily="@font/roboto_regular"
+                        android:id="@+id/step_header_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                    <TextView
+                        android:textColor="@color/default_howtoplay_content_text"
+                        android:textStyle="normal"
+                        android:padding="@dimen/standard_space"
+                        android:textSize="@dimen/howtoplay_introduction_text_size"
+                        android:fontFamily="@font/roboto_regular"
+                        android:id="@+id/step_content_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/next_mb"
+                        app:cornerRadius="@dimen/standard_space"
+                        app:backgroundTint="@color/appBlue"
+                        app:iconGravity="end"
+                        app:icon="@drawable/ic_right_arrow"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Next"
+                        android:layout_margin="@dimen/standard_space"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

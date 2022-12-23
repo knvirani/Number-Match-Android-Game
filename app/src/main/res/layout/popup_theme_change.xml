@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="@dimen/standard_space"
+    app:cardCornerRadius="@dimen/standard_space"
+    android:layout_gravity="center"
+    android:id="@+id/parent_cv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:gravity="center"
+            android:elevation="@dimen/standard_space"
+            android:layout_marginTop="@dimen/standard_space"
+            android:layout_marginHorizontal="@dimen/standard_space"
+            app:singleSelection="true"
+            android:id="@+id/material_toggle_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:theme="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:id="@+id/day_mb"
+                app:elevation="@dimen/standard_space"
+                app:cornerRadius="@dimen/standard_space"
+                app:icon="@drawable/ic_sun"
+                app:iconPadding="@dimen/standard_space"
+                android:fontFamily="@font/roboto_medium"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:textAllCaps="true"
+                android:text="@string/day"
+                android:paddingVertical="@dimen/standard_half_space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:theme="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:id="@+id/night_mb"
+                app:cornerRadius="@dimen/standard_space"
+                app:icon="@drawable/ic_moon"
+                app:iconPadding="@dimen/standard_space"
+                android:fontFamily="@font/roboto_medium"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:textAllCaps="true"
+                android:text="@string/night"
+                android:paddingVertical="@dimen/standard_half_space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:gravity="center"
+            android:layout_margin="@dimen/standard_space"
+            app:singleSelection="true"
+            android:id="@+id/material_text_size_toggle_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:theme="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:id="@+id/small_font_mb"
+                app:cornerRadius="@dimen/standard_space"
+                android:fontFamily="@font/roboto_medium"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:textAllCaps="false"
+                android:textSize="@dimen/standard_space"
+                android:text="Aa"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:theme="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:id="@+id/medium_font_mb"
+                app:cornerRadius="@dimen/standard_space"
+                android:fontFamily="@font/roboto_medium"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:text="Aa"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:theme="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:id="@+id/large_font_mb"
+                app:cornerRadius="@dimen/standard_space"
+                android:fontFamily="@font/roboto_medium"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:textAllCaps="false"
+                android:text="Aa"
+                android:textSize="24sp"
+                android:paddingVertical="@dimen/standard_half_space"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</com.google.android.material.card.MaterialCardView>
